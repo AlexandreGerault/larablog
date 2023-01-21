@@ -4,6 +4,8 @@ use App\Filament\Resources\ArticleResource;
 use App\Models\Article\ArticlePublishedStatus;
 use Database\Factories\ArticleFactory;
 use Database\Factories\UserFactory;
+use Livewire\Livewire;
+
 use function Pest\Laravel\actingAs;
 
 it("renders the admin index page", function () {

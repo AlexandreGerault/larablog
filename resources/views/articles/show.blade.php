@@ -94,7 +94,7 @@
                 </div>
             </form>
 
-            <section aria-label="comments" class="mt-6">
+            <section aria-label="comments" class="mt-6 space-y-4">
                 @foreach($comments as $comment)
                 <article class="px-6 py-4 rounded bg-gray-50">
                     <p class="text-lg font-semibold">
