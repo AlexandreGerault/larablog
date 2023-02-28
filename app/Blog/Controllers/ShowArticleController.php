@@ -14,10 +14,11 @@ class ShowArticleController
         }
 
         $article->load('comments');
+        $comments = $article->comments()->orderBy('created_at', 'desc')->get();
 
         return view('articles.show', [
             'article' => $article,
-            'comments' => $article->comments,
+            'comments' => $comments,
         ]);
     }
 }

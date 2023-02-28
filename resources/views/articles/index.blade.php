@@ -7,7 +7,7 @@
             <article id="article-{{ $article->id }}" class="px-12 py-6 bg-white shadow rounded flex flex-col gap-2 justify-between">
                 <header>
                     <h2 class="font-bold text-primary-500">{{ $article->title }}</h2>
-                    <p class="text-sm text-gray-500">{{ $article->created_at->format('d/m/Y') }}</p>
+                    <p class="text-sm text-gray-500">{{ $article->created_at }}</p>
                 </header>
 
                 <p class="text-sm text-gray-500">{{ $article->chapo }}</p>

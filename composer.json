@@ -5,6 +5,7 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
+        "ext-intl": "*",
         "php": "^8.2.0",
         "filament/filament": "^2.0",
         "filament/forms": "^2.0",

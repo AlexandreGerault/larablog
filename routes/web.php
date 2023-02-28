@@ -22,9 +22,7 @@ Route::get('/articles/{article}', ShowArticleController::class)->name('article.s
 Route::get('/articles', ListPublishedArticlesController::class)->name('article.index');
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'homepage')->name('homepage');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
