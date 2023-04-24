@@ -3,6 +3,7 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\ArticleResource\Pages;
+use App\Filament\Resources\ArticleResource\RelationManagers\CommentsRelationManager;
 use App\Models\Article;
 use App\Models\Article\ArticlePublishedStatus;
 use Filament\Forms;
@@ -68,7 +69,7 @@ class ArticleResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            CommentsRelationManager::class
         ];
     }
 

@@ -37,4 +37,9 @@ class ArticleFactory extends Factory
     {
         return $this->state(['published' => 'unpublished']);
     }
+
+    public function withComments(int $int): static
+    {
+        return $this->state(['comments' => CommentFactory::new()->count($int)]);
+    }
 }

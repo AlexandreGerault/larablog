@@ -46,7 +46,7 @@
                     </span>
 
                 <span class="inline-flex rounded-md shadow">
-                      <a href="{{ route('register') }}"
+                      <a href="{{ route('register.show') }}"
                          class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50">
                         Inscription
                       </a>

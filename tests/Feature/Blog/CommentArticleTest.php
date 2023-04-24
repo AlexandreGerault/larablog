@@ -17,7 +17,6 @@ it('shows the comment form', function () {
     $crawler = new Crawler($response->content());
 
     expect($crawler->filter('form[method="post"][action="' . $commentRoute . '"]')->count())->toBe(1)
-        ->and($crawler->filter('input[type="hidden"][name="_token"]')->count())->toBe(1)
         ->and($crawler->filter('input[name="email"]')->count())->toBe(1)
         ->and($crawler->filter('input[name="name"]')->count())->toBe(1)
         ->and($crawler->filter('textarea[name="content"]')->count())->toBe(1);

@@ -1,29 +1,30 @@
 <?php
 
-use App\Http\Controllers\Auth\AuthenticatedSessionController;
-use App\Http\Controllers\Auth\ConfirmablePasswordController;
-use App\Http\Controllers\Auth\EmailVerificationNotificationController;
-use App\Http\Controllers\Auth\EmailVerificationPromptController;
-use App\Http\Controllers\Auth\NewPasswordController;
-use App\Http\Controllers\Auth\PasswordController;
-use App\Http\Controllers\Auth\PasswordResetLinkController;
-use App\Http\Controllers\Auth\RegisteredUserController;
-use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Auth\Controllers\AuthenticatedSessionController;
+use App\Auth\Controllers\ConfirmablePasswordController;
+use App\Auth\Controllers\EmailVerificationNotificationController;
+use App\Auth\Controllers\EmailVerificationPromptController;
+use App\Auth\Controllers\NewPasswordController;
+use App\Auth\Controllers\PasswordController;
+use App\Auth\Controllers\PasswordResetLinkController;
+use App\Auth\Controllers\RegisteredUserController;
+use App\Auth\Controllers\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function () {
     Route::get('inscription', [RegisteredUserController::class, 'create'])
-                ->name('register');
+        ->name('register.show');
 
-    Route::post('inscription', [RegisteredUserController::class, 'store']);
+    Route::post('inscription', [RegisteredUserController::class, 'store'])
+        ->name('register.store');
 
     Route::get('connexion', [AuthenticatedSessionController::class, 'create'])
-                ->name('login');
+        ->name('login');
 
     Route::post('connexion', [AuthenticatedSessionController::class, 'store']);
 
     Route::get('mot-de-passe-oublie', [PasswordResetLinkController::class, 'create'])
-                ->name('password.request');
+        ->name('password.request');
 
     Route::post('mot-de-passe-oublie', [PasswordResetLinkController::class, 'store'])
                 ->name('password.email');
