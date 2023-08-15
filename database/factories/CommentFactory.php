@@ -14,10 +14,12 @@ class CommentFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition()
+    public function definition(): array
     {
         return [
-            //
+            'email' => $this->faker->email,
+            'name' => $this->faker->name,
+            'content' => $this->faker->text,
         ];
     }
 }
